@@ -37,7 +37,7 @@ const Todolist = ({ todoList, setTodoList }) => {
   };
 
   return (
-    <>
+    <div className="lists">
       {todoList ? (
         todoList.map((list) => (
           <div className="todo-list" key={list.id}>
@@ -45,13 +45,13 @@ const Todolist = ({ todoList, setTodoList }) => {
               {list.done ? "✔️" : ""}
             </button>
             <p className={list.done ? "done" : ""}>{list.task}</p>
-            <button onClick={deleteItem(list.id)}>-</button>
+            <button onClick={deleteItem(list.id)}>❌</button>
           </div>
         ))
       ) : (
         <p>List coming</p>
       )}
-    </>
+    </div>
   );
 };
 

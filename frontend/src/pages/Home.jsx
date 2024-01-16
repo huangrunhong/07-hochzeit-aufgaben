@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <section className="homePage">
-      <div>
+      <div className="title">
         <h1>My Todolist</h1>
         <form>
           <input

@@ -1,15 +1,62 @@
 #root {
-  max-width: 1280px;
+  // max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
-.todo-list {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.homePage {
+  width: 100%;
+  padding: 15% 20%;
+  border: 1px solid black;
+  border-radius: 2rem;
+  .title {
+    h1 {
+      font-size: 1.5rem;
+    }
+    form {
+      display: flex;
+      gap: 0.5rem;
+      input {
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        &:nth-of-type(2) {
+          background-color: yellowgreen;
+          border: none;
+        }
+      }
+    }
+  }
+  .lists {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .todo-list {
+      padding: 0.5rem 1.5rem;
+      background-color: beige;
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-  .done {
-    text-decoration: line-through;
+      button {
+        background-color: rgb(255, 255, 255);
+        width: 30px;
+        height: 30px;
+        padding: 2px;
+        font-size: xx-small;
+        border-radius: 50%;
+      }
+
+      button:active {
+        transform: scale(0.9);
+        box-shadow: 0 0 2px rgb(0, 0, 0);
+        border: none;
+      }
+      .done {
+        text-decoration: line-through;
+        color: gray;
+      }
+    }
   }
 }
